@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div id="containerLogoNavbar">
+        <a href="index.html"
+          ><img
+            src="pngtree-book-and-school-logo-vector-png-image_15302156.png"
+            alt="logoHeader"
+          />
+        </a>
+        <div id="headerButtons">
+          <button
+            type="button"
+            id="myFavButton"
+            class="btn btn-secondary btn-lg"
+          >
+            MES FAVORIS
+          </button>
+          <button type="button" id="menuButton" class="btn btn-light">
+            MENU
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="search">
+        <img src="f23640ce1850782a18c629446eb7198f.png" alt="logoMain" />
+        <h1>ENTREZ UN MOT TECHNIQUE</h1>
+        <div id="searchBar">
+          <form class="form-inline">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              id="searchTerm"
+            />
+            <button
+              type="button"
+              id="searchButton"
+              class="btn btn-outline-dark"
+            >
+              Rechercher
+            </button>
+          </form>
+        </div>
+        <div id="autoCompDisplay">
+          <ul>
+            <li>Term filter 1 </li>
+            <li>Term filer 2 </li>
+            <li>Term filter 3</li>
+          </ul>
+        </div>
+      </section>
+      <section id="filter">
+        <h2>FILTRE ALPHABET</h2>
+        <div id="alphabetFilter">
+          <label><input type="checkbox" data-letter="A"> A</label>
+          <label><input type="checkbox" data-letter="B"> B</label>
+          <label><input type="checkbox" data-letter="C"> C</label>
+          <label><input type="checkbox" data-letter="D"> D</label>
+          <label><input type="checkbox" data-letter="E"> E</label>
+          <label><input type="checkbox" data-letter="F"> F</label>
+          <label><input type="checkbox" data-letter="G"> G</label>
+          <label><input type="checkbox" data-letter="H"> H</label>
+          <label><input type="checkbox" data-letter="I"> I</label>
+          <label><input type="checkbox" data-letter="J"> J</label>
+          <label><input type="checkbox" data-letter="K"> K</label>
+          <label><input type="checkbox" data-letter="L"> L</label>
+          <label><input type="checkbox" data-letter="M"> M</label>
+          <label><input type="checkbox" data-letter="N"> N</label>
+          <label><input type="checkbox" data-letter="O"> O</label>
+          <label><input type="checkbox" data-letter="P"> P</label>
+          <label><input type="checkbox" data-letter="Q"> Q</label>
+          <label><input type="checkbox" data-letter="R"> R</label>
+          <label><input type="checkbox" data-letter="S"> S</label>
+          <label><input type="checkbox" data-letter="T"> T</label>
+          <label><input type="checkbox" data-letter="U"> U</label>
+          <label><input type="checkbox" data-letter="V"> V</label>
+          <label><input type="checkbox" data-letter="W"> W</label>
+          <label><input type="checkbox" data-letter="X"> X</label>
+          <label><input type="checkbox" data-letter="Y"> Y</label>
+          <label><input type="checkbox" data-letter="Z"> Z</label>
+        </div>        
+        <div id="terms-list">
+          <ul>
+            <li>Term 1</li>
+            <li>Term 2</li>
+            <li>Term 3</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">Features</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">About</a>
+        </li>
+      </ul>
+      <p class="text-center">© 2022 Company, Inc</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

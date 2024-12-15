@@ -1,0 +1,276 @@
+:root {
+  --dark-main-color: #201a25;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/* IMAGE SIZE */
+body {
+  header {
+    img {
+      width: 5rem;
+    }
+  }
+  main {
+    img {
+      width: 25rem;
+    }
+  }
+}
+
+/* DESKTOP 800+ index.html */
+@media (min-width: 800px) {
+  body {
+    header {
+      padding: 1rem 2rem;
+      background-color: var(--dark-main-color);
+      div#containerLogoNavbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div#headerButtons {
+          button {
+            margin: 0px 1rem;
+          }
+        }
+      }
+    }
+    main {
+      padding: 0px 10rem;
+      section#search {
+        padding-bottom: 3rem;
+        background-color: rgb(163, 163, 163);
+        color: #201a25;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          margin: 1rem 0rem;
+          font-weight: 700;
+        }
+        .form-inline {
+          display: flex;
+          button {
+            margin: 0px 1rem;
+          }
+        }
+        div#autoCompDisplay {
+          margin-top: 0.5rem;
+          ul li {
+            list-style: none;
+            background-color: #ffffff;
+            border: rgba(0, 0, 0, 0.247) solid 1px;
+            padding: 0.5rem;
+          }
+        }
+      }
+      section#myFavorites {
+        display: flex;
+        align-items: flex-end;
+        color: white;
+        padding: 2rem;
+        background-color: rgb(71, 71, 71);
+        button {
+          margin: 0rem 1rem;
+        }
+      }
+      section#filter {
+        background-color: #201a25;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 2.5rem;
+        h2 {
+          margin-bottom: 2rem;
+        }
+        #alphabetFilter {
+          padding: 20px;
+          border-radius: 8px; /* Coins arrondis */
+          display: grid;
+          grid-template-columns: repeat(6, 1fr); /* Répartition en 6 colonnes */
+          gap: 10px; /* Espacement entre les items */
+        }
+
+        #alphabetFilter label {
+          display: flex;
+          align-items: center;
+          gap: 8px; /* Espace entre la case et la lettre */
+          color: white; /* Texte blanc */
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+
+        #alphabetFilter input[type="checkbox"] {
+          width: 18px;
+          height: 18px;
+          cursor: pointer;
+        }
+
+        #alphabetFilter label:hover {
+          color: #1db954; /* Couleur verte au survol */
+        }
+
+        #terms-list {
+          color: var(--dark-main-color);
+          background-color: rgb(255, 255, 255);
+          ul {
+            padding-left: 0rem !important;
+            margin-bottom: 0rem !important;
+            li {
+              list-style: none;
+              border: #201a2536 solid 1px;
+              padding: 1rem 0;
+            }
+          }
+        }
+      }
+      section#definition {
+        background-color: rgb(219, 219, 219);
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        div#containerTermTechnique {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin: 5rem 0rem;
+          padding: 1rem;
+        }
+      }
+    }
+    footer.my-4 {
+      background-color: var(--dark-main-color);
+      margin: 0px !important;
+      ul .text-muted {
+        color: white !important;
+      }
+      color: #ffffff;
+    }
+  }
+}
+/* MOBILE / DESKTOP -800 index.html */
+@media (max-width: 800px) {
+  body {
+    header {
+      padding: 1rem 1rem;
+      background-color: var(--dark-main-color);
+      div#containerLogoNavbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div#headerButtons {
+          button {
+            margin: 0px 0.5rem;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    main {
+      padding: 0px 1rem;
+      section#search {
+        padding-bottom: 3rem;
+        background-color: rgb(138, 138, 138);
+        color: var(--dark-main-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          margin: 1rem;
+          font-weight: 700;
+        }
+        .form-inline {
+          margin-left: 0.5rem;
+          display: flex;
+          button {
+            margin: 0px 1rem;
+          }
+        }
+        div#autoCompDisplay {
+          margin-top: 0.5rem;
+          ul li {
+            list-style: none;
+            background-color: #ffffff;
+            border: rgba(0, 0, 0, 0.247) solid 1px;
+            padding: 0.5rem;
+          }
+        }
+      }
+      section#myFavorites {
+        display: flex;
+        align-items: flex-end;
+        color: white;
+        padding: 2rem;
+        background-color: rgb(71, 71, 71);
+        button {
+          margin: 0rem 1rem;
+        }
+      }
+      section#filter {
+        background-color: var(--dark-main-color);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2.5rem;
+        h2 {
+          margin-bottom: 2rem;
+        }
+        /* Version mobile */
+        #alphabetFilter {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); /* 3 colonnes au lieu de 6 */
+          gap: 8px; /* Réduit l’espacement pour économiser de l’espace */
+          padding: 15px; /* Réduit le padding */
+          label {
+            font-size: 14px; /* Texte légèrement plus petit */
+            gap: 6px; /* Espace réduit entre la case et la lettre */
+          }
+          input[type="checkbox"] {
+            width: 16px; /* Réduit la taille des cases */
+            height: 16px;
+          }
+        }
+        #terms-list {
+          color: var(--dark-main-color);
+          background-color: rgb(255, 255, 255);
+          ul {
+            padding-left: 0rem !important;
+            margin-bottom: 0rem !important;
+            li {
+              list-style: none;
+              border: #201a2536 solid 1px;
+              padding: 1rem 0;
+            }
+          }
+        }
+      }
+      section#definition {
+        background-color: rgb(219, 219, 219);
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        div#containerTermTechnique {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin: 5rem 0rem;
+          padding: 1rem;
+        }
+      }
+    }
+    footer.my-4 {
+      background-color: var(--dark-main-color);
+      margin: 0px !important;
+      ul .text-muted {
+        color: white !important;
+      }
+      p {
+        color: white;
+      }
+    }
+  }
+}
