@@ -1,4 +1,4 @@
-const definition = [
+export const definition = [
   {
     word: "APACHE",
     meaning:
@@ -27,4 +27,3 @@ const definition = [
   
 ];
 
-export default definition

@@ -40,7 +40,7 @@ body {
       padding: 0px 10rem;
       section#search {
         padding-bottom: 3rem;
-        background-color: rgb(163, 163, 163);
+        background-color: #6c757d;
         color: #201a25;
         display: flex;
         flex-direction: column;
@@ -49,19 +49,38 @@ body {
           margin: 1rem 0rem;
           font-weight: 700;
         }
-        .form-inline {
+        div#container {
           display: flex;
-          button {
-            margin: 0px 1rem;
+          div#containerLeft {
+            .form-inline {
+              #searchButton:hover {
+                background-color: var(--dark-main-color) !important;
+                border-color: var(--dark-main-color);
+              }
+              .form-control:focus {
+                border-color: white;
+                box-shadow: 0 0 0 0.25rem rgba(1, 1, 2, 0.356);
+              }
+            }
+            ul {
+              padding: 0;
+              margin: 0;
+              li {
+                margin-top: -5px;
+                list-style: none;
+                background-color: #ffffff;
+                border: rgba(184, 184, 184, 0.247) solid 1px;
+                border-radius: 0px 0px 5px 5px;
+                padding: 0.8rem;
+                transition: 0.3s;
+              }
+              li:hover{
+                 background-color: rgb(209, 209, 209);
+              }
+            }
           }
-        }
-        div#autoCompDisplay {
-          margin-top: 0.5rem;
-          ul li {
-            list-style: none;
-            background-color: #ffffff;
-            border: rgba(0, 0, 0, 0.247) solid 1px;
-            padding: 0.5rem;
+          div#containerRight {
+            margin-left: 1rem;
           }
         }
       }
@@ -128,7 +147,7 @@ body {
         }
       }
       section#definition {
-        background-color: rgb(219, 219, 219);
+        background-color: #6c757d;
         padding: 2rem 1rem;
         display: flex;
         flex-direction: column;
@@ -138,6 +157,8 @@ body {
           flex-direction: column;
           margin: 5rem 0rem;
           padding: 1rem;
+          div#termTechniqueWord{
+          }
         }
       }
     }
@@ -173,29 +194,47 @@ body {
       padding: 0px 1rem;
       section#search {
         padding-bottom: 3rem;
-        background-color: rgb(138, 138, 138);
-        color: var(--dark-main-color);
+        background-color: #6c757d;
+        color: #201a25;
         display: flex;
         flex-direction: column;
         align-items: center;
         h1 {
-          margin: 1rem;
+          margin: 1rem ;
           font-weight: 700;
         }
-        .form-inline {
-          margin-left: 0.5rem;
+        div#container {
           display: flex;
-          button {
-            margin: 0px 1rem;
+          div#containerLeft {
+            .form-inline {
+              #searchButton:hover {
+                background-color: var(--dark-main-color) !important;
+                border-color: var(--dark-main-color);
+              }
+              .form-control:focus {
+                border-color: white;
+                box-shadow: 0 0 0 0.25rem rgba(1, 1, 2, 0.356);
+              }
+            }
+            ul {
+              padding: 0;
+              margin: 0;
+              li {
+                margin-top: -5px;
+                list-style: none;
+                background-color: #ffffff;
+                border: rgba(184, 184, 184, 0.247) solid 1px;
+                border-radius: 0px 0px 5px 5px;
+                padding: 0.8rem;
+                transition: 0.3s;
+              }
+              li:hover{
+                 background-color: rgb(209, 209, 209);
+              }
+            }
           }
-        }
-        div#autoCompDisplay {
-          margin-top: 0.5rem;
-          ul li {
-            list-style: none;
-            background-color: #ffffff;
-            border: rgba(0, 0, 0, 0.247) solid 1px;
-            padding: 0.5rem;
+          div#containerRight {
+            margin-left: 1rem;
           }
         }
       }
