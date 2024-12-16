@@ -40,62 +40,52 @@
       <section id="search">
         <img src="f23640ce1850782a18c629446eb7198f.png" alt="logoMain" />
         <h1>ENTREZ UN MOT TECHNIQUE</h1>
-        <div id="searchBar">
+        <div id="container">
+          <div id="containerLeft">
           <form class="form-inline">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              id="searchTerm"
-            />
-            <button
-              type="button"
-              id="searchButton"
-              class="btn btn-outline-dark"
-            >
+            <input class="form-control mr-sm-2" type="search"placeholder="Search" aria-label="Search" id="searchUser"/>
+          </form>
+            <ul id="autoCompDisplay">
+              <li>terme technique</li>
+            </ul>
+          </div>
+          <div id="containerRight">
+            <button type="button" id="searchButton" class="btn btn-outline-dark">
               Rechercher
             </button>
-          </form>
-        </div>
-        <div id="autoCompDisplay">
-          <ul>
-            <li>Term filter 1 </li>
-            <li>Term filer 2 </li>
-            <li>Term filter 3</li>
-          </ul>
+          </div>
         </div>
       </section>
       <section id="filter">
         <h2>FILTRE ALPHABET</h2>
         <div id="alphabetFilter">
-          <label><input type="checkbox" data-letter="A"> A</label>
-          <label><input type="checkbox" data-letter="B"> B</label>
-          <label><input type="checkbox" data-letter="C"> C</label>
-          <label><input type="checkbox" data-letter="D"> D</label>
-          <label><input type="checkbox" data-letter="E"> E</label>
-          <label><input type="checkbox" data-letter="F"> F</label>
-          <label><input type="checkbox" data-letter="G"> G</label>
-          <label><input type="checkbox" data-letter="H"> H</label>
-          <label><input type="checkbox" data-letter="I"> I</label>
-          <label><input type="checkbox" data-letter="J"> J</label>
-          <label><input type="checkbox" data-letter="K"> K</label>
-          <label><input type="checkbox" data-letter="L"> L</label>
-          <label><input type="checkbox" data-letter="M"> M</label>
-          <label><input type="checkbox" data-letter="N"> N</label>
-          <label><input type="checkbox" data-letter="O"> O</label>
-          <label><input type="checkbox" data-letter="P"> P</label>
-          <label><input type="checkbox" data-letter="Q"> Q</label>
-          <label><input type="checkbox" data-letter="R"> R</label>
-          <label><input type="checkbox" data-letter="S"> S</label>
-          <label><input type="checkbox" data-letter="T"> T</label>
-          <label><input type="checkbox" data-letter="U"> U</label>
-          <label><input type="checkbox" data-letter="V"> V</label>
-          <label><input type="checkbox" data-letter="W"> W</label>
-          <label><input type="checkbox" data-letter="X"> X</label>
-          <label><input type="checkbox" data-letter="Y"> Y</label>
-          <label><input type="checkbox" data-letter="Z"> Z</label>
-        </div>        
+          <label><input type="checkbox" data-letter="A" /> A</label>
+          <label><input type="checkbox" data-letter="B" /> B</label>
+          <label><input type="checkbox" data-letter="C" /> C</label>
+          <label><input type="checkbox" data-letter="D" /> D</label>
+          <label><input type="checkbox" data-letter="E" /> E</label>
+          <label><input type="checkbox" data-letter="F" /> F</label>
+          <label><input type="checkbox" data-letter="G" /> G</label>
+          <label><input type="checkbox" data-letter="H" /> H</label>
+          <label><input type="checkbox" data-letter="I" /> I</label>
+          <label><input type="checkbox" data-letter="J" /> J</label>
+          <label><input type="checkbox" data-letter="K" /> K</label>
+          <label><input type="checkbox" data-letter="L" /> L</label>
+          <label><input type="checkbox" data-letter="M" /> M</label>
+          <label><input type="checkbox" data-letter="N" /> N</label>
+          <label><input type="checkbox" data-letter="O" /> O</label>
+          <label><input type="checkbox" data-letter="P" /> P</label>
+          <label><input type="checkbox" data-letter="Q" /> Q</label>
+          <label><input type="checkbox" data-letter="R" /> R</label>
+          <label><input type="checkbox" data-letter="S" /> S</label>
+          <label><input type="checkbox" data-letter="T" /> T</label>
+          <label><input type="checkbox" data-letter="U" /> U</label>
+          <label><input type="checkbox" data-letter="V" /> V</label>
+          <label><input type="checkbox" data-letter="W" /> W</label>
+          <label><input type="checkbox" data-letter="X" /> X</label>
+          <label><input type="checkbox" data-letter="Y" /> Y</label>
+          <label><input type="checkbox" data-letter="Z" /> Z</label>
+        </div>
         <div id="terms-list">
           <ul>
             <li>Term 1</li>
@@ -128,6 +118,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
