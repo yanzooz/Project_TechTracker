@@ -5,13 +5,12 @@ const menuButton = document.getElementById("menuButton");
 
 // fonction qui retourne un tableau d'oject en fontion de l'entrée de l'utilisateur
 function searchDefinition(searchUser) {
-  const resultDisplay = definition.filter((object) =>
-    object.word.toLowerCase().includes(searchUser.toLowerCase())
-  );
-  if (searchUser) {
+    if (!searchUser) return []; // Retourner un tableau vide si la recherche est vide
+    const resultDisplay = definition.filter((object) =>
+      object.word.toLowerCase().startsWith(searchUser.toLowerCase())
+    );
     return resultDisplay;
   }
-}
 // fonction qui affiche en temps réel le tableau d'objet retourné par sD()
 function displayResults(result) {
   const autoCompDisplay = document.getElementById("autoCompDisplay");
@@ -41,7 +40,6 @@ function launchSkeletonPage(searchUser) {
     });
   }
 }
-
 
 function filterByFirstLetter(firstLetter){
     const termList = document.getElementById("terms-list")

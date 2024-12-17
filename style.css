@@ -66,6 +66,7 @@ body {
               padding: 0;
               margin: 0;
               li {
+                cursor: pointer;
                 margin-top: -5px;
                 list-style: none;
                 background-color: #ffffff;
