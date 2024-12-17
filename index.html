@@ -30,7 +30,7 @@
           >
             MES FAVORIS
           </button>
-          <button type="button" id="menuButton" class="btn btn-light">
+          <button type="button" id="menuButton" class="btn btn-light btn-lg">
             MENU
           </button>
         </div>
@@ -42,15 +42,23 @@
         <h1>ENTREZ UN MOT TECHNIQUE</h1>
         <div id="container">
           <div id="containerLeft">
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search"placeholder="Search" aria-label="Search" id="searchUser"/>
-          </form>
-            <ul id="autoCompDisplay">
-              <li>terme technique</li>
-            </ul>
+            <form class="form-inline">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                id="searchUser"
+              />
+            </form>
+            <ul id="autoCompDisplay"></ul>
           </div>
           <div id="containerRight">
-            <button type="button" id="searchButton" class="btn btn-outline-dark">
+            <button
+              type="button"
+              id="searchButton"
+              class="btn btn-outline-dark"
+            >
               Rechercher
             </button>
           </div>
@@ -59,40 +67,87 @@
       <section id="filter">
         <h2>FILTRE ALPHABET</h2>
         <div id="alphabetFilter">
-          <label><input type="checkbox" data-letter="A" /> A</label>
-          <label><input type="checkbox" data-letter="B" /> B</label>
-          <label><input type="checkbox" data-letter="C" /> C</label>
-          <label><input type="checkbox" data-letter="D" /> D</label>
-          <label><input type="checkbox" data-letter="E" /> E</label>
-          <label><input type="checkbox" data-letter="F" /> F</label>
-          <label><input type="checkbox" data-letter="G" /> G</label>
-          <label><input type="checkbox" data-letter="H" /> H</label>
-          <label><input type="checkbox" data-letter="I" /> I</label>
-          <label><input type="checkbox" data-letter="J" /> J</label>
-          <label><input type="checkbox" data-letter="K" /> K</label>
-          <label><input type="checkbox" data-letter="L" /> L</label>
-          <label><input type="checkbox" data-letter="M" /> M</label>
-          <label><input type="checkbox" data-letter="N" /> N</label>
-          <label><input type="checkbox" data-letter="O" /> O</label>
-          <label><input type="checkbox" data-letter="P" /> P</label>
-          <label><input type="checkbox" data-letter="Q" /> Q</label>
-          <label><input type="checkbox" data-letter="R" /> R</label>
-          <label><input type="checkbox" data-letter="S" /> S</label>
-          <label><input type="checkbox" data-letter="T" /> T</label>
-          <label><input type="checkbox" data-letter="U" /> U</label>
-          <label><input type="checkbox" data-letter="V" /> V</label>
-          <label><input type="checkbox" data-letter="W" /> W</label>
-          <label><input type="checkbox" data-letter="X" /> X</label>
-          <label><input type="checkbox" data-letter="Y" /> Y</label>
-          <label><input type="checkbox" data-letter="Z" /> Z</label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="A" />A
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="B" />B
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="C" />C
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="D" />D
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="E" />E
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="F" />F
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="G" />G
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="H" />H
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="I" />I
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="J" />J
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="K" />K
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="L" />L
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="M" />M
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="N" />N
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="O" />O
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="P" />P
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="Q" />Q
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="R" />R
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="S" />S
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="T" />T
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="U" />U
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="V" />V
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="W" />W
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="X" />X
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="Y" />Y
+          </label>
+          <label>
+            <input class="radioLetter" type="radio" name="letterSelected" value="Z" />Z
+          </label>      
         </div>
-        <div id="terms-list">
-          <ul>
-            <li>Term 1</li>
-            <li>Term 2</li>
-            <li>Term 3</li>
+          <ul id="terms-list">
           </ul>
-        </div>
       </section>
     </main>
     <footer class="py-3 my-4">

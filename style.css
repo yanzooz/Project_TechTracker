@@ -74,8 +74,8 @@ body {
                 padding: 0.8rem;
                 transition: 0.3s;
               }
-              li:hover{
-                 background-color: rgb(209, 209, 209);
+              li:hover {
+                background-color: rgb(209, 209, 209);
               }
             }
           }
@@ -96,68 +96,97 @@ body {
       }
       section#filter {
         background-color: #201a25;
-        color: white;
         display: flex;
         flex-direction: column;
         text-align: center;
         padding: 2.5rem 2.5rem;
         h2 {
+          color: white;
           margin-bottom: 2rem;
         }
         #alphabetFilter {
-          padding: 20px;
-          border-radius: 8px; /* Coins arrondis */
-          display: grid;
-          grid-template-columns: repeat(6, 1fr); /* Répartition en 6 colonnes */
-          gap: 10px; /* Espacement entre les items */
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
         }
 
         #alphabetFilter label {
-          display: flex;
-          align-items: center;
-          gap: 8px; /* Espace entre la case et la lettre */
-          color: white; /* Texte blanc */
-          font-size: 16px;
+          color: white;
+          display: inline-block;
+          text-align: center;
+          width: 40px;
+          height: 40px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          line-height: 40px;
+          cursor: pointer;
           font-weight: bold;
-          cursor: pointer;
+          transition: all 0.3s ease;
         }
 
-        #alphabetFilter input[type="checkbox"] {
-          width: 18px;
-          height: 18px;
-          cursor: pointer;
+        #alphabetFilter input[type="radio"] {
+          display: none;
         }
 
+        /* Effet hover et actif */
         #alphabetFilter label:hover {
-          color: #1db954; /* Couleur verte au survol */
+          transform: scale(1.1);
+          border-color: #007bff;
+          box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+          color: #a9d3ff;
         }
 
+        #alphabetFilter label:has(input[type="radio"]:checked) {
+          background-color: #2e94d7;
+          color: white;
+          border-color: #00b7ff;
+          box-shadow: 0 0 10px #1d4373;
+        }
+        /* Liste des termes */
         #terms-list {
-          color: var(--dark-main-color);
-          background-color: rgb(255, 255, 255);
-          ul {
-            padding-left: 0rem !important;
-            margin-bottom: 0rem !important;
-            li {
-              list-style: none;
-              border: #201a2536 solid 1px;
-              padding: 1rem 0;
-            }
-          }
+          list-style: none;
+          margin-top: 20px;
+          padding: 0;
+        }
+
+        #terms-list li {
+          padding: 10px 15px;
+          margin: 5px 0;
+          font-weight: 700;
+          font-size: 1.2rem;
+          background-color: #ffffff;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease;
+        }
+
+        #terms-list li:hover {
+          transform: translateX(5px);
+          border-color: #000000;
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.733);
         }
       }
+
       section#definition {
-        background-color: #6c757d;
-        padding: 2rem 1rem;
-        display: flex;
-        flex-direction: column;
+        background-color: #201a25;
+        border-top: #5c636a solid 0.5rem;
+        border-bottom: #dc3545 solid 0.5rem;
+        padding: 1rem;
         div#containerTermTechnique {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          margin: 5rem 0rem;
+          margin: 2rem 0rem;
           padding: 1rem;
-          div#termTechniqueWord{
+          background-color: #e9e9e9;
+          border: #cccccc solid 0.5rem;
+          color: #201a25;
+          border-radius: 10px;
+          div#termTechniqueWord {
+            font-size: 3rem;
+            font-weight: 600;
+          }
+          div#termTechniqueDefinition {
+            font-size: 2rem;
           }
         }
       }
@@ -200,7 +229,7 @@ body {
         flex-direction: column;
         align-items: center;
         h1 {
-          margin: 1rem ;
+          margin: 1rem;
           font-weight: 700;
         }
         div#container {
@@ -228,8 +257,8 @@ body {
                 padding: 0.8rem;
                 transition: 0.3s;
               }
-              li:hover{
-                 background-color: rgb(209, 209, 209);
+              li:hover {
+                background-color: rgb(209, 209, 209);
               }
             }
           }
@@ -250,42 +279,68 @@ body {
       }
       section#filter {
         background-color: var(--dark-main-color);
-        color: white;
         display: flex;
         flex-direction: column;
         text-align: center;
         padding-top: 2.5rem;
         h2 {
+          color: white;
           margin-bottom: 2rem;
+          font-size: 1.4rem;
         }
         /* Version mobile */
         #alphabetFilter {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr); /* 3 colonnes au lieu de 6 */
-          gap: 8px; /* Réduit l’espacement pour économiser de l’espace */
-          padding: 15px; /* Réduit le padding */
-          label {
-            font-size: 14px; /* Texte légèrement plus petit */
-            gap: 6px; /* Espace réduit entre la case et la lettre */
-          }
-          input[type="checkbox"] {
-            width: 16px; /* Réduit la taille des cases */
-            height: 16px;
-          }
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 5px;
         }
+
+        #alphabetFilter label {
+          color: white;
+          display: inline-block;
+          text-align: center;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 0.8rem;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          cursor: pointer;
+          font-weight: bold;
+          transition: all 0.3s ease;
+        }
+
+        #alphabetFilter input[type="radio"] {
+          display: none;
+        }
+
+        #alphabetFilter label:has(input[type="radio"]:checked) {
+          background-color: #2e94d7;
+          color: white;
+          border-color: #00b7ff;
+          box-shadow: 0 0 10px #1d4373;
+        }
+
+        /* Liste des termes */
         #terms-list {
-          color: var(--dark-main-color);
-          background-color: rgb(255, 255, 255);
-          ul {
-            padding-left: 0rem !important;
-            margin-bottom: 0rem !important;
-            li {
-              list-style: none;
-              border: #201a2536 solid 1px;
-              padding: 1rem 0;
-            }
-          }
+          list-style: none;
+          margin-top: 20px;
+          padding: 0;
         }
+
+        #terms-list li {
+          padding: 8px 10px;
+          font-size: 0.9rem;
+          margin: 5px 0;
+          font-weight: 700;
+          background-color: #ffffff;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease;
+        }
+       
       }
       section#definition {
         background-color: rgb(219, 219, 219);
