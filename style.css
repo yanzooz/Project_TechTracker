@@ -169,6 +169,23 @@ body {
           border-color: #000000;
           box-shadow: 0 0 10px rgba(255, 255, 255, 0.733);
         }
+        div#buttonAll{
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 1rem;
+          button{
+            border:none;
+            padding: 0.7rem 0.5rem;
+            border-radius: 5px;
+            background-color: #7cc0ff;
+            font-weight: 500;
+            transition: 0.4s ease-in-out;
+          }
+          button:hover{
+            background-color: #022a81;
+            color: white;
+          }
+        }
       }
 
       section#definition {

@@ -44,23 +44,8 @@ function launchSkeletonPageById(id) {
   if (id) {
     definition.forEach((item) => {
       if (id === item.id) {
-        // Ce code recoit un un id / il initilize un local storage avec une paire clé valeur / 
-        // si le local storage est vide ou contient pas le meme id  on crée un tableau contenant un id  /
-        // si le tableau n'est pas vide et l'id et different de tous les id du tableau on push alors l'id dans le tableau 
         let favoriteTerms = JSON.parse(localStorage.getItem("favoriteTerms"));
         console.log(favoriteTerms);
-        if (favoriteTerms) {
-          if (!favoriteTerms.includes(item.id)) {
-            favoriteTerms.push(item.id);
-            localStorage.setItem(
-              "favoriteTerms",
-              JSON.stringify(favoriteTerms)
-            );
-          }
-        } else {
-          localStorage.setItem("favoriteTerms", JSON.stringify([item.id]));
-        }
-
         window.location.href = `termTechnique.html?id=${id}`;
       }
     });
@@ -89,9 +74,10 @@ function menu() {
     console.log("click menuButton");
     window.location.href = "index.html";
   });
+
   MY_FAV_BUTTON.addEventListener("click", () => {
     console.log("click MY_FAV_BUTTON");
-    window.location.href = "termTechnique.html";
+    window.location.href = "myFavTerm.html";
   });
 
   //   Section Search
@@ -111,6 +97,7 @@ function menu() {
   const ALL_RADIO_LETTERS = document.querySelectorAll(".radioLetter");
   ALL_RADIO_LETTERS.forEach((radioButton) => {
     radioButton.addEventListener("click", () => {
+      console.log("click letter")
       filterByFirstLetter(radioButton.value);
     });
   });

@@ -1,11 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes termes favoris </title>
-</head>
-<body>
-   <p>mes termes favoris</p> 
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mes termes favoris</title>
+  </head>
+  <body>
+    <header>
+      <div id="containerLogoNavbar">
+        <a href="index.html"
+          ><img
+            src="pngtree-book-and-school-logo-vector-png-image_15302156.png"
+            alt="logoHeader"
+          />
+        </a>
+        <div id="headerButtons">
+          <button
+            type="button"
+            id="myFavButton"
+            class="btn btn-secondary btn-lg"
+          >
+            MES FAVORIS
+          </button>
+          <button type="button" id="menuButton" class="btn btn-light btn-lg">
+            MENU
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="filter">
+        <h2>FILTRE ALPHABET</h2>
+        <div id="alphabetFilter">
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="A"
+            />A
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="B"
+            />B
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="C"
+            />C
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="D"
+            />D
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="E"
+            />E
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="F"
+            />F
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="G"
+            />G
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="H"
+            />H
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="I"
+            />I
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="J"
+            />J
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="K"
+            />K
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="L"
+            />L
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="M"
+            />M
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="N"
+            />N
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="O"
+            />O
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="P"
+            />P
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="Q"
+            />Q
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="R"
+            />R
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="S"
+            />S
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="T"
+            />T
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="U"
+            />U
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="V"
+            />V
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="W"
+            />W
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="X"
+            />X
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="Y"
+            />Y
+          </label>
+          <label>
+            <input
+              class="radioLetter"
+              type="radio"
+              name="letterSelected"
+              value="Z"
+            />Z
+          </label>
+        </div>
+        <div id="buttonAll"><button type="button" id="allButton">ALL TERMS</button></div>
+        <ul id="terms-list"></ul>
+      </section>
+    </main>
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">Features</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">About</a>
+        </li>
+      </ul>
+      <p class="text-center">© 2022 Company, Inc</p>
+    </footer>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+    <script type="module" src="myFavTermScript.js"></script>
+  </body>
 </html>
