@@ -2,7 +2,8 @@ import { definition } from "./object-list.js";
 
 const MY_FAV_BUTTON = document.getElementById("myFavButton");
 const menuButton = document.getElementById("menuButton");
-
+const ALL_BUTTON_TERMS = document.getElementById("allButton");
+let isShowAllLetter = false;
 // fonction qui retourne un tableau d'oject en fontion de l'entrée de l'utilisateur
 function searchDefinition(searchUser) {
   if (!searchUser) return []; // Retourner un tableau vide si la recherche est vide
@@ -67,6 +68,29 @@ function filterByFirstLetter(firstLetter) {
   });
 }
 
+function allLetterDisplay() {
+  const termList = document.getElementById("terms-list");
+  if (isShowAllLetter) {
+    termList.innerHTML = "";
+    ALL_BUTTON_TERMS.innerHTML = "ALL TERMS";
+  } else {
+    termList.innerHTML = "";
+    ALL_BUTTON_TERMS.innerHTML = "ALL TERMS ✖";
+    let sortedDefinitions = definition.sort(function (a, b) {
+      return a.word.localeCompare(b.word);
+    });
+    sortedDefinitions.forEach((item) => {
+    let li = document.createElement("li");
+    li.textContent = item.word;
+    termList.appendChild(li);
+    li.addEventListener("click", () => {
+      launchSkeletonPageById(item.id);
+    });
+  });
+  }
+  isShowAllLetter = !isShowAllLetter;
+}
+
 // Script Menu
 function menu() {
   // Mes boutons de la navbar
@@ -97,9 +121,13 @@ function menu() {
   const ALL_RADIO_LETTERS = document.querySelectorAll(".radioLetter");
   ALL_RADIO_LETTERS.forEach((radioButton) => {
     radioButton.addEventListener("click", () => {
-      console.log("click letter")
+      console.log("click letter");
       filterByFirstLetter(radioButton.value);
     });
+  });
+
+  ALL_BUTTON_TERMS.addEventListener("click", () => {
+    allLetterDisplay();
   });
 }
 
