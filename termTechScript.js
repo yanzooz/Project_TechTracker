@@ -29,13 +29,13 @@ function addToFavoriteList(paramValue) {
     favoriteTerms = favoriteTerms.filter((term) => term !== paramValue); // Supprime l'élément
     localStorage.setItem("favoriteTerms", JSON.stringify(favoriteTerms)); // Met à jour le localStorage
     console.log(`${paramValue} has been removed from your favorites`);
-    addFavButton.innerHTML = "Ajout aux favoris ❤"
+    addFavButton.innerHTML = "Ajouter aux favoris ❤"
   } else {
     // Cas 1 : paramValue n'est pas dans le tableau, on l'ajoute
     favoriteTerms.push(paramValue); // Ajoute l'élément
     localStorage.setItem("favoriteTerms", JSON.stringify(favoriteTerms)); // Met à jour le localStorage
     console.log(`${paramValue} has been added to your favorites`);
-    addFavButton.innerHTML = "Retirez des favoris ✖"
+    addFavButton.innerHTML = "Retirer des favoris ❌"
   }
 }
 

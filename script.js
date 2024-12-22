@@ -129,6 +129,7 @@ function menu() {
   ALL_BUTTON_TERMS.addEventListener("click", () => {
     allLetterDisplay();
   });
+  
 }
 
 menu();
