@@ -7,9 +7,9 @@ const ALL_BUTTON_TERMS = document.getElementById("allButton");
 let favoriteTermsId = JSON.parse(localStorage.getItem("favoriteTerms"));
 const backButton = document.getElementById("back");
 let isShowAllLetter = false;
-const empty = document.getElementById("emptyMsg")
+const empty = document.getElementById("emptyMsg");
 const termList = document.getElementById("terms-list");
-console.log(definition)
+console.log(definition);
 
 function launchSkeletonPageById(id) {
   if (id) {
@@ -27,7 +27,7 @@ function filterFavoritesByFirstLetter(firstLetter) {
   let favoriteTerms = definition.filter((term) =>
     favoriteTermsId.includes(String(term.id))
   );
-  console.log(favoriteTerms)
+  console.log(favoriteTerms);
 
   termList.innerHTML = "";
   favoriteTerms.forEach((item) => {
@@ -82,28 +82,27 @@ function menu() {
   });
 
   backButton.addEventListener("click", () => {
-    window.history.back()
+    window.history.back();
   });
-  
 
-  console.log(favoriteTermsId)
-  if(favoriteTermsId.length === 0){
-    empty.style.display = "block"
-  }else{
-    empty.style.display = "none"
+  console.log(favoriteTermsId);
+  if (favoriteTermsId.length === 0) {
+    empty.style.display = "block";
+    termList.style.display = "none";
+  } else {
+    empty.style.display = "none";
+    termList.style.display = "grid";
     allLetterDisplay();
-//  FIlter
-ALL_RADIO_LETTERS.forEach((radioButton) => {
-  radioButton.addEventListener("click", () => {
-    filterFavoritesByFirstLetter(radioButton.value);
-  });
-});
-ALL_BUTTON_TERMS.addEventListener("click", () => {
-  allLetterDisplay();
-});
+    //  FIlter
+    ALL_RADIO_LETTERS.forEach((radioButton) => {
+      radioButton.addEventListener("click", () => {
+        filterFavoritesByFirstLetter(radioButton.value);
+      });
+    });
+    ALL_BUTTON_TERMS.addEventListener("click", () => {
+      allLetterDisplay();
+    });
   }
-
-
 }
 
 menu();
