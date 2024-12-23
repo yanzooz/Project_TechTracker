@@ -5,7 +5,10 @@ const menuButton = document.getElementById("menuButton");
 const ALL_RADIO_LETTERS = document.querySelectorAll(".radioLetter");
 const ALL_BUTTON_TERMS = document.getElementById("allButton");
 let favoriteTermsId = JSON.parse(localStorage.getItem("favoriteTerms"));
+const backButton = document.getElementById("back");
 let isShowAllLetter = false;
+const empty = document.getElementById("emptyMsg")
+const termList = document.getElementById("terms-list");
 console.log(definition)
 
 function launchSkeletonPageById(id) {
@@ -25,7 +28,7 @@ function filterFavoritesByFirstLetter(firstLetter) {
     favoriteTermsId.includes(String(term.id))
   );
   console.log(favoriteTerms)
-  const termList = document.getElementById("terms-list");
+
   termList.innerHTML = "";
   favoriteTerms.forEach((item) => {
     if (item.word[0].toLowerCase() === firstLetter.toLowerCase()) {
@@ -43,7 +46,8 @@ function allLetterDisplay() {
   let favoriteTerms = definition.filter((term) =>
     favoriteTermsId.includes(String(term.id))
   );
-  const termList = document.getElementById("terms-list");
+  termList.style.height = "auto";
+  termList.style.overflowY = "hidden";
   if (isShowAllLetter) {
     termList.innerHTML = "";
     ALL_BUTTON_TERMS.innerHTML = "ALL TERMS";
@@ -55,7 +59,7 @@ function allLetterDisplay() {
     });
     sortedDefinitions.forEach((item) => {
       let li = document.createElement("li");
-      li.textContent = item.word;
+      li.textContent = `${item.word}❤️`;
       termList.appendChild(li);
       li.addEventListener("click", () => {
         launchSkeletonPageById(item.id);
@@ -77,19 +81,29 @@ function menu() {
     window.location.href = "myFavTerm.html";
   });
 
-  allLetterDisplay();
-
-  //  FIlter
-  ALL_RADIO_LETTERS.forEach((radioButton) => {
-    radioButton.addEventListener("click", () => {
-      filterFavoritesByFirstLetter(radioButton.value);
-    });
+  backButton.addEventListener("click", () => {
+    window.history.back()
   });
+  
 
-
-  ALL_BUTTON_TERMS.addEventListener("click", () => {
+  console.log(favoriteTermsId)
+  if(favoriteTermsId.length === 0){
+    empty.style.display = "block"
+  }else{
+    empty.style.display = "none"
     allLetterDisplay();
+//  FIlter
+ALL_RADIO_LETTERS.forEach((radioButton) => {
+  radioButton.addEventListener("click", () => {
+    filterFavoritesByFirstLetter(radioButton.value);
   });
+});
+ALL_BUTTON_TERMS.addEventListener("click", () => {
+  allLetterDisplay();
+});
+  }
+
+
 }
 
 menu();

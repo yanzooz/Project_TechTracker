@@ -9,6 +9,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="iconeList\icond.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +24,7 @@
       <div id="containerLogoNavbar">
         <a href="index.html"
           ><img
-            src="iconeList\pngtree-book-and-school-logo-vector-png-image_15302156.png"
+            src="iconeList\icond.png"
             alt="logoHeader"
           />
         </a>
@@ -44,9 +45,10 @@
     <main>
       <section id="heroPageFavorites"">
         <h1>VOS FAVORIS</h1>
+        <button type="button" id="back" class="btn btn-outline-secondary"> ⬅ Retour</button>
       </section>
       <section id="filter">
-        <h2>FILTRE ALPHABET</h2>
+        <h2>Filtrer les termes par lettre</h2>
         <div id="alphabetFilter">
           <label>
             <input
@@ -257,8 +259,9 @@
             />Z
           </label>
         </div>
-        <div id="buttonAll"><button type="button" id="allButton">ALL TERMS</button></div>
+        <div id="buttonAll"><button type="button" id="allButton">AFFICHER TOUS</button></div>
         <ul id="terms-list"></ul>
+        <p id="emptyMsg">Aucun favori enregistré pour l’instant.</p>
       </section>
     </main>
     <footer class="py-3 my-4">
@@ -276,7 +279,7 @@
           <a href="https://github.com/yanzooz" class="nav-link px-2 text-muted">Porfolio</a>
         </li>
       </ul>
-      <p class="text-center">© 2024 yanzooz, Inc</p>
+      <p class="text-center">© 2024 yanzooz Tech Tracher, Inc</p>
     </footer>
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

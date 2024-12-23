@@ -4,6 +4,8 @@ const MY_FAV_BUTTON = document.getElementById("myFavButton");
 const menuButton = document.getElementById("menuButton");
 const ALL_BUTTON_TERMS = document.getElementById("allButton");
 let isShowAllLetter = false;
+let favoriteTermsId = JSON.parse(localStorage.getItem("favoriteTerms"));
+
 // fonction qui retourne un tableau d'oject en fontion de l'entrée de l'utilisateur
 function searchDefinition(searchUser) {
   if (!searchUser) return []; // Retourner un tableau vide si la recherche est vide
@@ -56,10 +58,20 @@ function launchSkeletonPageById(id) {
 function filterByFirstLetter(firstLetter) {
   const termList = document.getElementById("terms-list");
   termList.innerHTML = "";
+  termList.style.height = "auto";
+  termList.style.overflowY = "hidden";
   definition.forEach((item) => {
     if (item.word[0].toLowerCase() === firstLetter.toLowerCase()) {
       const li = document.createElement("li");
-      li.textContent = item.word;
+      console.log(
+        `item.id: ${item.id.toString()} / favoriteTermsId: ${favoriteTermsId} `
+      );
+      if (favoriteTermsId.includes(item.id.toString())) {
+        li.textContent = `${item.word} ❤️`;
+        li.style.backgroundColor = "#ffff";
+      } else {
+        li.textContent = item.word;
+      }
       termList.appendChild(li);
       li.addEventListener("click", () => {
         launchSkeletonPageById(item.id);
@@ -70,23 +82,30 @@ function filterByFirstLetter(firstLetter) {
 
 function allLetterDisplay() {
   const termList = document.getElementById("terms-list");
+  termList.style.height = "40vh";
+  termList.style.overflowY = "scroll";
   if (isShowAllLetter) {
     termList.innerHTML = "";
-    ALL_BUTTON_TERMS.innerHTML = "ALL TERMS";
+    ALL_BUTTON_TERMS.innerHTML = "AFFICHER TOUS";
   } else {
     termList.innerHTML = "";
-    ALL_BUTTON_TERMS.innerHTML = "ALL TERMS ✖";
+    ALL_BUTTON_TERMS.innerHTML = " REDUIRE TOUS ✖";
     let sortedDefinitions = definition.sort(function (a, b) {
       return a.word.localeCompare(b.word);
     });
     sortedDefinitions.forEach((item) => {
-    let li = document.createElement("li");
-    li.textContent = item.word;
-    termList.appendChild(li);
-    li.addEventListener("click", () => {
-      launchSkeletonPageById(item.id);
+      let li = document.createElement("li");
+      if (favoriteTermsId.includes(item.id.toString())) {
+        li.textContent = `${item.word} ❤️`;
+        li.style.backgroundColor = "#ffff";
+      } else {
+        li.textContent = item.word;
+      }
+      termList.appendChild(li);
+      li.addEventListener("click", () => {
+        launchSkeletonPageById(item.id);
+      });
     });
-  });
   }
   isShowAllLetter = !isShowAllLetter;
 }
@@ -118,6 +137,18 @@ function menu() {
     launchSkeletonPageByUserInput(searchUser.value.toLowerCase());
   });
 
+  const form = document.querySelector("form");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+    console.log("Formulaire soumis sans rechargement !");
+  });
+  searchInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      console.log("entrer key");
+      launchSkeletonPageByUserInput(searchUser.value.toLowerCase());
+    }
+  });
+
   const ALL_RADIO_LETTERS = document.querySelectorAll(".radioLetter");
   ALL_RADIO_LETTERS.forEach((radioButton) => {
     radioButton.addEventListener("click", () => {
@@ -126,10 +157,10 @@ function menu() {
     });
   });
 
+  allLetterDisplay();
   ALL_BUTTON_TERMS.addEventListener("click", () => {
     allLetterDisplay();
   });
-  
 }
 
 menu();

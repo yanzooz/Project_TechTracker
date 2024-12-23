@@ -19,6 +19,10 @@ body {
   }
 }
 
+button {
+  font-weight: 500 !important;
+}
+
 /* DESKTOP 800+ index.html */
 @media (min-width: 800px) {
   body {
@@ -39,13 +43,13 @@ body {
     main {
       font-family: "Markazi Text", serif;
       padding: 0px 20%;
-      background-image: linear-gradient(#ffffff7c, #000000),
-        url("iconeList/f23640ce1850782a18c629446eb7198f.png");
+      background-image: linear-gradient(#201a25, #000000bd),
+        url("iconeList/f7eea04f9167c71c63c006ad0cd6db5c.jpg");
       background-position: center;
       background-size: cover;
       section#search {
         padding-bottom: 3rem;
-        background-color: #6c757d38;
+        background-color: #6c757d91;
         color: #201a25;
         display: flex;
         flex-direction: column;
@@ -57,6 +61,8 @@ body {
         div#container {
           display: flex;
           div#containerLeft {
+            z-index: 2;
+            height: 15vh;
             .form-inline {
               #searchButton:hover {
                 background-color: var(--dark-main-color) !important;
@@ -87,15 +93,24 @@ body {
           }
           div#containerRight {
             margin-left: 1rem;
+            button.btn-outline-dark {
+              border: #201a25 solid 1px;
+              color: #201a25;
+            }
+            button.btn-outline-dark:hover {
+              border: #5c5c5c solid 1px;
+              color: #ffffff;
+              background-color: #201a25;
+            }
           }
         }
       }
       section#heroPageFavorites {
-        display: flex;
-        background-image: linear-gradient(#201a25ce, #201a25b2),
-          url("iconeList/bc394e73bd63d3600b44cdf8f8080f7c.jpg");
+        background-image: linear-gradient(#201a25, #00000000),
+          url("iconeList/f7eea04f9167c71c63c006ad0cd6db5c.jpg");
+        background-size: cover;
         color: white;
-        padding: 5rem 1rem;
+        padding: 5rem 1rem 3rem;
         h1 {
           font-size: 7rem;
         }
@@ -111,6 +126,7 @@ body {
         }
       }
       section#filter {
+        z-index: 1;
         background-color: #201a2591;
         display: flex;
         flex-direction: column;
@@ -119,7 +135,7 @@ body {
         h2 {
           color: white;
           margin-bottom: 2rem;
-          font-weight:900;
+          font-weight: 900;
         }
         #alphabetFilter {
           display: flex;
@@ -170,12 +186,15 @@ body {
           grid-gap: 2rem;
           grid-auto-rows: minmax(100px, auto);
           align-items: center;
+          height: 40vh;
+          overflow-y: scroll;
+          overflow-x: hidden;
         }
 
         #terms-list li {
           cursor: pointer;
           padding: 30px 15px;
-          margin: 5px 0;
+          margin: 5px;
           font-weight: 700;
           font-size: 1.2rem;
           background-color: #ffffff;
@@ -190,6 +209,11 @@ body {
           border-color: #000000;
           background-color: rgb(192, 192, 192);
           box-shadow: 0 0 10px rgba(255, 255, 255, 0.733);
+        }
+        p#emptyMsg {
+          font-size: 1.5rem;
+          color: white;
+          font-style: italic;
         }
         div#buttonAll {
           display: flex;
@@ -209,7 +233,6 @@ body {
           }
         }
       }
-
       section#definition {
         background-color: #201a25;
         border-top: #5c636a solid 0.5rem;
@@ -218,7 +241,10 @@ body {
         div#containerTermTechnique {
           margin: 2rem 0rem;
           padding: 1rem;
-          background-color: #e9e9e9;
+          background-image: linear-gradient(#e9e9e9fd, #e9e9e9e7),
+            url(iconeList/icond.png);
+          background-size: cover;
+          background-position: center;
           border: #cccccc solid 0.5rem;
           color: #201a25;
           border-radius: 10px;
@@ -228,6 +254,12 @@ body {
           }
           div#termTechniqueDefinition {
             font-size: 2rem;
+          }
+          div#imgFavoris {
+            display: none;
+            img {
+              width: 3rem;
+            }
           }
         }
       }
@@ -252,6 +284,17 @@ body {
       }
     }
   }
+  div#titleTermTech {
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    height: auto;
+    font-weight: 900;
+    font-size: 7rem;
+    background-image: linear-gradient(#201a25, #201a2594),
+      url("iconeList/69aff7963b8cde0f85bbdbdd9acc6fc7.jpg");
+    background-position: center;
+    background-size: cover;
+  }
 }
 /* MOBILE / DESKTOP -800 index.html */
 @media (max-width: 800px) {
@@ -274,8 +317,8 @@ body {
     main {
       font-family: "Markazi Text", serif;
       padding: 0px 1rem;
-      background-image: linear-gradient(#ffffff57, #000000),
-        url("iconeList/f23640ce1850782a18c629446eb7198f.png");
+      background-image: linear-gradient(#201a25, #000000bd),
+        url("iconeList/f7eea04f9167c71c63c006ad0cd6db5c.jpg");
       background-position: center;
       background-size: cover;
       section#search {
@@ -292,6 +335,8 @@ body {
         div#container {
           display: flex;
           div#containerLeft {
+            z-index: 2;
+            height: 15vh;
             .form-inline {
               #searchButton:hover {
                 background-color: var(--dark-main-color) !important;
@@ -321,13 +366,23 @@ body {
           }
           div#containerRight {
             margin-left: 1rem;
+            button.btn-outline-dark {
+              border: #201a25 solid 1px;
+              color: #201a25;
+            }
+            button.btn-outline-dark:hover {
+              border: #5c5c5c solid 1px;
+              color: #ffffff;
+              background-color: #201a25;
+            }
           }
         }
       }
       section#heroPageFavorites {
-        display: flex;
-        background-image: linear-gradient(#201a25ce, #201a25b2),
-          url("iconeList/bc394e73bd63d3600b44cdf8f8080f7c.jpg");
+        background-image: linear-gradient(#201a25, #00000049),
+          url("iconeList/a188eacaea4a7ce87060a12c94285921.jpg");
+        background-size: cover;
+        background-position: center;
         color: white;
         padding: 5rem 1rem;
         h1 {
@@ -345,6 +400,7 @@ body {
         }
       }
       section#filter {
+        z-index: 1;
         background-color: #201a25a6;
         display: flex;
         flex-direction: column;
@@ -399,12 +455,15 @@ body {
           grid-template-columns: repeat(2, 1fr);
           grid-gap: 0.5rem;
           align-items: center;
+          height: 40vh;
+          overflow-y: scroll;
+          overflow-x: hidden;
         }
 
         #terms-list li {
           padding: 20px 10px;
           font-size: 0.9rem;
-          margin: 5px 0;
+          margin: 5px;
           font-weight: 700;
           background-color: #ffffff;
           border: 1px solid #ddd;
@@ -412,6 +471,12 @@ body {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
           transition: all 0.3s ease;
         }
+        p#emptyMsg {
+          font-size: 1.5rem;
+          color: white;
+          font-style: italic;
+        }
+
         div#buttonAll {
           display: flex;
           justify-content: flex-end;
@@ -435,7 +500,10 @@ body {
         div#containerTermTechnique {
           margin: 1rem 0rem;
           padding: 1rem;
-          background-color: #e9e9e9;
+          background-image: linear-gradient(#e9e9e9fd, #e9e9e9e7),
+            url(iconeList/icond.png);
+          background-size: cover;
+          background-position: center;
           border: #cccccc solid 0.5rem;
           color: #201a25;
           border-radius: 10px;
@@ -445,6 +513,12 @@ body {
           }
           div#termTechniqueDefinition {
             font-size: 1.5rem;
+          }
+          div#imgFavoris {
+            display: none;
+            img {
+              width: 2rem;
+            }
           }
         }
       }
@@ -470,14 +544,15 @@ body {
       }
     }
   }
-}
-
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+  div#titleTermTech {
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    height: 7rem;
+    font-weight: 900;
+    font-size: 4rem;
+    background-image: linear-gradient(#201a25, #201a2594),
+      url("iconeList/69aff7963b8cde0f85bbdbdd9acc6fc7.jpg");
+    background-position: center;
+    background-size: cover;
+  }
 }
