@@ -4,7 +4,7 @@ const MY_FAV_BUTTON = document.getElementById("myFavButton");
 const menuButton = document.getElementById("menuButton");
 const ALL_BUTTON_TERMS = document.getElementById("allButton");
 let isShowAllLetter = false;
-let favoriteTermsId = JSON.parse(localStorage.getItem("favoriteTerms"));
+let favoriteTermsId = JSON.parse(localStorage.getItem("favoriteTerms")) || [];
 
 // fonction qui retourne un tableau d'oject en fontion de l'entrée de l'utilisateur
 function searchDefinition(searchUser) {
@@ -95,14 +95,12 @@ function allLetterDisplay() {
     });
     sortedDefinitions.forEach((item) => {
       let li = document.createElement("li");
-      if (favoriteTermsId) {
         if (favoriteTermsId.includes(item.id.toString())) {
           li.textContent = `${item.word} ❤️`;
           li.style.backgroundColor = "#ffff";
-        }
-      } else {
-        li.textContent = item.word;
-      }
+        }else {
+          li.textContent = item.word;
+        } 
       termList.appendChild(li);
       li.addEventListener("click", () => {
         launchSkeletonPageById(item.id);

@@ -189,6 +189,10 @@ button {
           height: 40vh;
           overflow-y: scroll;
           overflow-x: hidden;
+          transition: 0.5s;
+        }
+        #terms-list:hover{
+          background-color: #afafaf8c;
         }
 
         #terms-list li {
@@ -448,6 +452,7 @@ button {
 
         /* Liste des termes */
         #terms-list {
+          background-color: #ffffff69;
           list-style: none;
           margin-top: 20px;
           padding: 0;
@@ -458,7 +463,9 @@ button {
           height: 40vh;
           overflow-y: scroll;
           overflow-x: hidden;
+          background-color: #afafaf8c;
         }
+        
 
         #terms-list li {
           padding: 20px 10px;
