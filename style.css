@@ -547,9 +547,9 @@ button {
   div#titleTermTech {
     padding: 1rem;
     color: rgb(255, 255, 255);
-    height: 7rem;
+    height:10rem;
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 3rem;
     background-image: linear-gradient(#201a25, #201a2594),
       url("iconeList/69aff7963b8cde0f85bbdbdd9acc6fc7.jpg");
     background-position: center;
