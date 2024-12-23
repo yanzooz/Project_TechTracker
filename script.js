@@ -95,9 +95,11 @@ function allLetterDisplay() {
     });
     sortedDefinitions.forEach((item) => {
       let li = document.createElement("li");
-      if (favoriteTermsId.includes(item.id.toString())) {
-        li.textContent = `${item.word} ❤️`;
-        li.style.backgroundColor = "#ffff";
+      if (favoriteTermsId) {
+        if (favoriteTermsId.includes(item.id.toString())) {
+          li.textContent = `${item.word} ❤️`;
+          li.style.backgroundColor = "#ffff";
+        }
       } else {
         li.textContent = item.word;
       }
